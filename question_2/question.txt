@@ -1,0 +1,32 @@
+2 - Convert the following procedural PHP7 code into object oriented style
+
+code.
+
+
+function make_astronaut( string $name, float $weight ) {
+
+    return [ 'name' => $name, 'weight' => $weight ];
+
+}
+
+
+function add_weight_to_astronaut( array &$astronaut, float $pounds ) {
+
+    $astronaut['weight'] += $pounds;
+
+}
+
+
+function launch_astronaut( array $astronaut ) {
+
+    if ( $astronaut['weight'] > 200 ) {
+
+        echo "{$astronaut['name']} too heavy, grounded.\n";
+
+    } else {
+
+        echo "{$astronaut['name']} going where no human has gone before.\n";
+
+    }
+
+}

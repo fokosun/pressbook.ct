@@ -1,0 +1,6 @@
+I decided to not pass in an array containing the astronaut name and weight by value into the add_weight_to_astronaut
+and launch_astronaut methods by value and reference respectively because the Astronaut class has those properties defined
+The name and weight property are set when the make_astronaut command is called. Doing it this way helps track the state
+of the Astronaut object and there are getter method present in the class that can be used to fetch the properties.
+Also if there is a child class extending Astronaut as a parent class they can access the name and weight properties
+by calling the public getter methods.
