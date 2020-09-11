@@ -1,0 +1,2 @@
+Question:
+Explain the differences between HEAD, GET and POST in the HTTP protocol.
