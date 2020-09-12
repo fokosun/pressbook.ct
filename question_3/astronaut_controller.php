@@ -11,8 +11,8 @@ if (!isset($_POST['name']) || $_POST['name'] === "" || count($_POST['name']) == 
 	header("Location: http://localhost:8081/?weightErr=true");
 } else {
 	$astronaut = new Astronaut([
-		'name' => $_POST['name'],
-		'weight' => $_POST['weight']
+		'name' => filter_var($_POST['name'], FILTER_SANITIZE_STRING),
+		'weight' => filter_var($_POST['weight'], FILTER_SANITIZE_NUMBER_INT)
 	]);
 
 	if ($astronaut->save()) {
