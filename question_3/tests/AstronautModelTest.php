@@ -15,49 +15,6 @@ class AstronautModelTest extends TestCase
 	}
 
 	/**
-	 * @tes
-	 */
-	public function validation_fails_if_the_astronaut_name_is_not_given()
-	{
-		$new_astronaut = new Astronaut([
-			'weight' => 167
-		]);
-		//assert the errors
-	}
-
-	/**
-	 * @tes
-	 */
-	public function validation_fails_if_the_astronaut_weight_is_not_given()
-	{
-		$new_astronaut = new Astronaut([
-			'name' => 'test name'
-		]);
-		//assert the errors
-	}
-
-	/**
-	 * @tes
-	 */
-	public function validation_fails_if_the_astronaut_weight_is_not_an_integer()
-	{
-		$new_astronaut = new Astronaut([
-			'name' => 'test name',
-			'weight' => 'not an integer'
-		]);
-		//assert the errors
-	}
-
-	/**
-	 * @tes
-	 */
-	public function validation_fails_if_the_request_is_emoty()
-	{
-		$new_astronaut = new Astronaut();
-		//assert the errors
-	}
-
-	/**
 	 * @test
 	 */
 	public function it_has_name_attribute()
