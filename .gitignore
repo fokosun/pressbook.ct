@@ -2,4 +2,5 @@
 question_2/vendor/
 question_3/vendor/
 question_3/.env
+question_3/config/
 .phpunit.result.cache
