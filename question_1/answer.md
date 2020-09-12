@@ -43,7 +43,8 @@ response:
 ```
 
 ## HEAD request method:
-This is very similar to the GET request method. The only difference is that the server responds without a response body.
+This is similar to the GET request, but the server only returns the response header without the response body. 
+Use case is for checking headers e.g Content-Type, Content-Length etc before sending an actual GET request to retrieve a resource or document.
 
 ## POST request method:
 This is a http request method that is used to create a new resource. A post request is sent to the server along with the request body (the contents of a form request for example email, password etc).
@@ -122,28 +123,25 @@ response:
 //updates only the title of the book resource.
 ```
 
-
-
 ## DIFFERENCES:
 
 **Purpose**
 
-- GET: retrive resource
+- GET: retrieve resource
 - POST: create new resource
 - PUT: perform full update of a specified resource
-- PATCH: partial update of a specified resource
+- PATCH: a partial update of a specified resource
 - DELETE: delete a specified resource
-- HEAD:
-
+- HEAD: check header before sending the actual GET request
 
 **Response code**
 
-- GET: 200 
-- POST: 201
+- GET: 200 OK
+- POST: 201 CREATED
 - PUT: 200 0r 204 (with response content/ without response content)
 - PATCH: 200 0r 204 (with response content/ without response content)
 - DELETE: 200 0r 204 (with response content/ without response content)
-- HEAD:
+- HEAD: 200 OK
 
 **Request Parameters**
 - GET: does not require request parameters 
@@ -151,11 +149,10 @@ response:
 - PUT: requires request parameters e.g the id of the resource to be perform a full update on
 - PATCH: requires request parameters e.g the id of the resource to be perform a partial update on
 - DELETE: requires request parameters e.g the id of the resource to be perform a delete action on
-- HEAD:
+- HEAD: None
 
 
 `For all of them, the server is expected to respond with a 404 status code if the resource is not found.`
-
 
 
 ## Final comments:
