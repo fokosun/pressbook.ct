@@ -1,3 +1,5 @@
 .idea/
 question_2/vendor/
+question_3/vendor/
+question_3/.env
 .phpunit.result.cache
