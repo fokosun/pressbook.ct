@@ -1,0 +1,14 @@
+5 - Given the following string:
+
+
+$str = 'drinking giving jogging 喝 喝 passing 制图 giving 跑步 吃';
+
+
+Using PHP, write a function that:
+
+
+ 1. Moves all Chinese characters to the end of the string, reversing their current order.
+
+ 2. Removes duplicate English words.
+
+ 3. Returns the modified string
