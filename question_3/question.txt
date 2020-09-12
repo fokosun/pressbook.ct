@@ -1,0 +1,19 @@
+3 - You are given the following table in database `nasa`:
+
+
+CREATE TABLE astronaut ( name text, weight int );
+
+
+Write a simple PHP page that displays a form to enter the name and
+
+weight of an astronaut and on submission enters those values into the
+
+database. (Simple in this case means you do not have to be 
+
+fancy, but you still need to be complete and correct. Assume the database 
+
+is running on the local host and use user nasa and password nasa to connect).
+
+Use a DB abstraction layer to write your code. Example: PDO or WPDB. Use prepared
+
+statements.
