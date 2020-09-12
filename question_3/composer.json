@@ -13,8 +13,10 @@
     "psr-4": {
       "Nasa\\": "App/"
     },
-
-    "classmap": ["App/"]
+    "classmap": ["App/"],
+    "files": [
+      "Helper.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {

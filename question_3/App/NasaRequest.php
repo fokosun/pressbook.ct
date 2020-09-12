@@ -14,7 +14,6 @@ class NasaRequest
 	public function __construct(array $params)
 	{
 		$this->params = $params;
-		//TODO: request validation
 	}
 
 	/**
