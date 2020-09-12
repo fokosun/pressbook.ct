@@ -4,6 +4,21 @@
 
 ### How to view this app
  - ensure you're in the root directory `/question_3`
+ - create your own database config file `config/database.php`
+ example config:
+ 
+ ```
+return [
+	'connections' => [
+		'driver' => 'mysql',
+		'host' => 'localhost',
+		'user' => 'nasa',
+		'password' => 'nasa',
+		'database' => 'nasa'
+	]
+];
+```
+
  - run this command to serve the app
  
  ```
