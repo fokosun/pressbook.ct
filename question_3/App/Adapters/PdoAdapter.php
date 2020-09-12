@@ -32,7 +32,7 @@ class PdoAdapter implements dbConnector
 	/**
 	 * @return \PDO
 	 */
-	public function getConnection(): \PDO
+	public function getConnection()
 	{
 		return $this->connection;
 	}

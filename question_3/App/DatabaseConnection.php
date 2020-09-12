@@ -2,12 +2,10 @@
 
 namespace Nasa;
 
-use PDO;
 use Nasa\Interfaces\dbConnector;
 
 class DatabaseConnection
 {
-	/** @var PDO  */
 	protected $adapter;
 
 	/**
@@ -28,14 +26,24 @@ class DatabaseConnection
 	 */
 	public function getConnection()
 	{
-		return $this->adapter->getConnection();
+		return $this->getAdapter()->getConnection();
 	}
 
 	/**
 	 * Close the connection
 	 */
-	public function close_connection ()
+	public function close_connection()
 	{
-		$this->adapter->closeConnection();
+		$this->getAdapter()->closeConnection();
+	}
+
+	/**
+	 * Get the Adapter instance
+	 *
+	 * @return mixed
+	 */
+	public function getAdapter()
+	{
+		return $this->adapter;
 	}
 }

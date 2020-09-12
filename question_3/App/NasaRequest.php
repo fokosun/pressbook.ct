@@ -22,6 +22,10 @@ class NasaRequest
 	 */
 	public function get($key)
 	{
-		return $this->params[$key];
+		if (isset($this->params[$key])) {
+			return $this->params[$key];
+		}
+
+		return null;
 	}
 }

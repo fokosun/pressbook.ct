@@ -26,7 +26,7 @@ class BaseModel {
 	{
 		$statement = $this->connection
 			->getConnection()
-			->prepare('INSERT INTO astronaut (astronaut_name, weight) VALUES (:astronaut_name, :weight)');
+			->prepare("INSERT INTO " . $this->table .  "(astronaut_name, weight) VALUES (:astronaut_name, :weight)");
 
 		return $statement->execute([
 			'astronaut_name' => $this->request->get('name'),
