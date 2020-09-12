@@ -4,3 +4,11 @@ question_3/vendor/
 question_3/.env
 question_3/config/
 .phpunit.result.cache
+question_1/.phpunit.result.cache
+question_2/.phpunit.result.cache
+question_3/.phpunit.result.cache
+question_4/.phpunit.result.cache
+question_5/.phpunit.result.cache
+question_6/.phpunit.result.cache
+question_7/.phpunit.result.cache
+question_8/.phpunit.result.cache
