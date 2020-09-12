@@ -3,41 +3,32 @@
 namespace Nasa;
 
 use PDO;
+use Nasa\Interfaces\dbConnector;
 
 class DatabaseConnection
 {
 	/** @var PDO  */
-	protected $conn;
+	protected $adapter;
 
 	/**
 	 * Set up database connection with PDO
 	 *
 	 * DatabaseConnection constructor.
+	 * @param dbConnector $adapter
 	 */
-	public function __construct()
+	public function __construct(dbConnector $adapter)
 	{
-		//TODO: fetch creds with dotenv
-		$servername = "localhost";
-		$username = "root";
-		$password = "Str()nger1";
-
-		try {
-			$this->conn = new PDO("mysql:host=$servername;dbname=nasa", $username, $password);
-
-			// set the PDO error mode to exception
-			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		} catch(\PDOException $e) {
-			echo "Connection failed: " . $e->getMessage();
-			//throw this into the global header something along those lines
-		}
+		$this->adapter = $adapter;
 	}
 
 	/**
-	 * @return PDO
+	 * Get the database Connection
+	 *
+	 * @return mixed
 	 */
-	public function getConnection(): PDO
+	public function getConnection()
 	{
-		return $this->conn;
+		return $this->adapter->getConnection();
 	}
 
 	/**
@@ -45,6 +36,6 @@ class DatabaseConnection
 	 */
 	public function close_connection ()
 	{
-		$this->conn = null;
+		$this->adapter->closeConnection();
 	}
 }

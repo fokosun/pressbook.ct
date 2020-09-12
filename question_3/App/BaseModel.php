@@ -11,7 +11,7 @@ class BaseModel {
 
 	public function __construct($params = [])
 	{
-		$this->connection = new DatabaseConnection();
+		$this->connection = new DatabaseConnection(new PdoAdapter());
 		$this->attributes = $params;
 		$this->request = new NasaRequest($params);
 	}
