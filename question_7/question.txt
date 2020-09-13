@@ -1,0 +1,10 @@
+7  - Get Pressbooks working locally and attach a screenshot showing that you could do it.
+
+If there are problems, document and fix them.
+
+
++ https://docs.pressbooks.org/local-development/
+
++ MacOS: https://docs.pressbooks.org/local-development/macos/
+
++ Windows: https://docs.pressbooks.org/local-development/windows/

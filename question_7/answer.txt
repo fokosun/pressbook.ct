@@ -1,0 +1,11 @@
+vagrant up failed due to the absence of Kindlegen gz in the /tmp/ directory.
+What I did to try and resolve this:
+- I went on amazon to download it www.amazon.com/kindleformat/kindlegen but it is no longer available for download
+- Amazon suggests downloading Kindle Previewer instead but that is a .pkg and not a .gz
+- I did a google search to see if I can find anywhere online where I can download it but to no avail.
+- Next, I tried converting the pkg into gz format with an online too, the problem is the file size is almost 500MB
+it costs me money to upload and the conversion for that file size. It will take a long to upload.
+
+My conclusion:
+Under the assumption that I was able to access a gz version, the provisioning will be successful
+and I will be able to access `pressbooks.test` locally
