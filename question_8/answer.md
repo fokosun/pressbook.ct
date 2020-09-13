@@ -30,4 +30,4 @@ NONCE_SALT='generateme'
 ```
 
 My guess is that the key in question is most likely the AUTH_KEY. 
-It can any of the keys listed here in the example environment file.
+It can be any of the keys listed here in the example environment file.
