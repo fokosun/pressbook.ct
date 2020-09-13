@@ -1,0 +1,2 @@
+6 - Use a GitHub Branch as a Composer Dependency, Explain how you would configure composer to use
+`https://github.com/pressbooks/new-private-project` with the branch `bugfixes` in your project.
