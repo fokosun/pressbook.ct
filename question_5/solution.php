@@ -7,13 +7,8 @@ function sortByCharacterEncoding($str) {
 	$str_arr = explode(' ', $str);
 	$unique = array_unique($str_arr);
 
-	$non_ascii = array_filter($unique, function ($word) {
-		return mb_detect_encoding($word) != 'ASCII';
-	});
-
-	$ascii = array_filter($unique, function ($word) {
-		return mb_detect_encoding($word) == 'ASCII';
-	});
+	$non_ascii = array_filter($unique, fn($word) => mb_detect_encoding($word) != 'ASCII');
+	$ascii = array_filter($unique, fn($word) => mb_detect_encoding($word) == 'ASCII');
 
 	$combined = array_merge($ascii, $non_ascii);
 
