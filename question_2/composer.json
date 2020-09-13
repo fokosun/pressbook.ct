@@ -9,8 +9,8 @@
         "php": "^7.0",
         "phpunit/phpunit": "^9.3",
         "ext-pdo": "*",
-      "ext-json": "*",
-      "ext-mbstring": "*"
+        "ext-json": "*",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4": {
