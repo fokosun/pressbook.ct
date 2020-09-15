@@ -2,20 +2,21 @@
 
 namespace Nasa;
 
+use Nasa\Exceptions\AstronautException;
+
 class NasaRequest
 {
-	/** @var array  */
 	protected array $params;
 
 	/**
 	 * NasaRequest constructor.
 	 * @param array $params
-	 * @throws \Exception
+	 * @throws AstronautException
 	 */
 	public function __construct(array $params)
 	{
 		if (!$params) {
-			throw new \Exception('Astronaut information are required.');
+			throw new AstronautException('Astronaut information are required.');
 		}
 
 		$this->params = $params;
