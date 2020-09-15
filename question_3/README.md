@@ -9,12 +9,14 @@
  
  ```
 return [
+	'default' => 'mysql',
 	'connections' => [
-		'driver' => 'mysql',
-		'host' => 'localhost',
-		'user' => 'nasa',
-		'password' => 'nasa',
-		'database' => 'nasa'
+		'mysql' => [
+            'host' => 'localhost',
+			'user' => 'nasa',
+			'password' => 'nasa',
+			'database' => 'nasa'
+		],
 	]
 ];
 ```
