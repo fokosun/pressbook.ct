@@ -65,7 +65,7 @@ class AstronautTest extends TestCase
 	/**
 	 * @test
 	 */
-	public function an_astronaut_is_too_heavy_when_their_weight_is_less_than_or_equal_to_200()
+	public function an_astronaut_is_not_heavy_when_their_weight_is_less_than_or_equal_to_200()
 	{
 		$astronaut = new Astronaut();
 		$astronaut->make_astronaut('John Glenn', 5.673);
