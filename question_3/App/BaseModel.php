@@ -2,13 +2,20 @@
 
 namespace Nasa;
 
+use Nasa\Adapters\PdoAdapter;
+
 class BaseModel {
 
 	protected DatabaseConnection $connection;
-	public $attributes;
+	public array $attributes;
 	protected string $table;
 	protected NasaRequest $request;
 
+	/**
+	 * BaseModel constructor.
+	 * @param array $params
+	 * @throws Exceptions\AstronautException
+	 */
 	public function __construct($params = [])
 	{
 		$this->connection = new DatabaseConnection(new PdoAdapter());
@@ -32,13 +39,5 @@ class BaseModel {
 			'astronaut_name' => $this->request->get('name'),
 			'weight' => $this->request->get('weight'),
 		]);
-	}
-
-	/**
-	 * Close the DB connection
-	 */
-	public function __destruct()
-	{
-		$this->connection->close_connection();
 	}
 }

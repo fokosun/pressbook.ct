@@ -30,14 +30,6 @@ class DatabaseConnection
 	}
 
 	/**
-	 * Close the connection
-	 */
-	public function close_connection()
-	{
-		$this->getAdapter()->closeConnection();
-	}
-
-	/**
 	 * Get the Adapter instance
 	 *
 	 * @return mixed
