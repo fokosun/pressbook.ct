@@ -1,24 +1,11 @@
-This should refer to a configuration key needed for pressbooks to function.
-There's an .env.example file at the root of pressbooks/bedrock (site directory) that looks like the following:
+This should refer to a configuration key(s) needed for pressbooks to function.
+There's an .env.example file at the root of pressbooks/bedrock (site directory) that 
+looks like the following:
 
 ```
-DB_NAME=database_name
-DB_USER=database_user
-DB_PASSWORD=database_password
-
-# Optionally, you can use a data source name (DSN)
-# When using a DSN, you can remove the DB_NAME, DB_USER, DB_PASSWORD, and DB_HOST variables
-# DATABASE_URL=mysql://database_user:database_password@database_host:database_port/database_name
-
-# Optional variables
-# DB_HOST=localhost
-# DB_PREFIX=wp_
-
-WP_ENV=development
-WP_HOME=http://example.com
-WP_SITEURL=${WP_HOME}/wp
-
+...
 # Generate your keys here: https://roots.io/salts.html
+
 AUTH_KEY='generateme'
 SECURE_AUTH_KEY='generateme'
 LOGGED_IN_KEY='generateme'
@@ -29,5 +16,22 @@ LOGGED_IN_SALT='generateme'
 NONCE_SALT='generateme'
 ```
 
-My guess is that the key in question is most likely the AUTH_KEY. 
-It can be any of the keys listed here in the example environment file.
+And in trellis/group_vars/staging and production, a .yml file that looks like the following:
+
+```
+...
+vault_wordpress_sites:
+  example.com:
+    env:
+      db_password: example_dbpassword
+      # Generate your keys here: https://roots.io/salts.html
+      auth_key: "generateme"
+      secure_auth_key: "generateme"
+      logged_in_key: "generateme"
+      nonce_key: "generateme"
+      auth_salt: "generateme"
+      secure_auth_salt: "generateme"
+      logged_in_salt: "generateme"
+      nonce_salt: "generateme"
+```
+The needed keys can be generated using the `https://roots.io/salts.html` tool. It generates both the env format and yml formats.
