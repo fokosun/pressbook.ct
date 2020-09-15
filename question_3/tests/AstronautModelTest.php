@@ -1,6 +1,7 @@
 <?php
 
 use Nasa\Astronaut;
+use Nasa\BaseModel;
 use PHPUnit\Framework\TestCase;
 
 class AstronautModelTest extends TestCase
@@ -10,8 +11,11 @@ class AstronautModelTest extends TestCase
 	 */
 	public function it_is_a_base_model_instance()
 	{
-		$new_astronaut = new Astronaut();
-		$this->assertInstanceOf(\Nasa\BaseModel::class, $new_astronaut);
+		$new_astronaut = new Astronaut([
+			'name' => 'John Glenn',
+			'weight' => 167
+		]);
+		$this->assertInstanceOf(BaseModel::class, $new_astronaut);
 	}
 
 	/**
@@ -48,6 +52,17 @@ class AstronautModelTest extends TestCase
 			'weight' => 167
 		]);
 
+		$this->assertTrue($new_astronaut->save());
+	}
+
+	/**
+	 * @test
+	 */
+	public function it_throws_an_exception_if_the_request_params_is_not_given()
+	{
+		$this->expectException(Exception::class);
+
+		$new_astronaut = new Astronaut([]);
 		$this->assertTrue($new_astronaut->save());
 	}
 }
