@@ -6,7 +6,7 @@ use Nasa\Interfaces\dbConnector;
 
 class DatabaseConnection
 {
-	protected $adapter;
+	protected dbConnector $adapter;
 
 	/**
 	 * Set up database connection with PDO

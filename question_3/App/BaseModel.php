@@ -4,10 +4,10 @@ namespace Nasa;
 
 class BaseModel {
 
-	protected $connection;
+	protected DatabaseConnection $connection;
 	public $attributes;
-	protected $table;
-	protected $request;
+	protected string $table;
+	protected NasaRequest $request;
 
 	public function __construct($params = [])
 	{

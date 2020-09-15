@@ -4,5 +4,5 @@ namespace Nasa;
 
 class Astronaut extends BaseModel
 {
-	protected $table = 'astronaut';
+	protected string $table = 'astronaut';
 }

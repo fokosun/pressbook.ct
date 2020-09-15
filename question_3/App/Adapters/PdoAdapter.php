@@ -6,7 +6,6 @@ use Nasa\Interfaces\dbConnector;
 
 class PdoAdapter implements dbConnector
 {
-	/** @var \PDO  */
 	protected $connection;
 
 	/**
@@ -24,8 +23,7 @@ class PdoAdapter implements dbConnector
 			$this->connection = new \PDO("$dsn:host=$servername;dbname=$database", $username, $password);
 			$this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		} catch(\PDOException $e) {
-			echo "Connection failed: " . $e->getMessage();
-			die();
+			throw new \Exception("Connection failed: ", $e->getMessage());
 		}
 	}
 
