@@ -2,6 +2,7 @@
 
 use Nasa\NasaRequest;
 use PHPUnit\Framework\TestCase;
+use Nasa\Exceptions\AstronautException;
 
 class NasaRequestTest extends TestCase
 {
@@ -26,7 +27,7 @@ class NasaRequestTest extends TestCase
 	 */
 	public function it_throws_an_exception_if_a_given_key_is_not_set()
 	{
-		$this->expectException(Exception::class);
+		$this->expectException(AstronautException::class);
 
 		new NasaRequest([]);
 	}

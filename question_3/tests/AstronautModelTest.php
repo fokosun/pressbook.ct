@@ -2,6 +2,7 @@
 
 use Nasa\Astronaut;
 use Nasa\BaseModel;
+use Nasa\Exceptions\AstronautException;
 use PHPUnit\Framework\TestCase;
 
 class AstronautModelTest extends TestCase
@@ -60,7 +61,7 @@ class AstronautModelTest extends TestCase
 	 */
 	public function it_throws_an_exception_if_the_request_params_is_not_given()
 	{
-		$this->expectException(Exception::class);
+		$this->expectException(AstronautException::class);
 
 		$new_astronaut = new Astronaut([]);
 		$this->assertTrue($new_astronaut->save());
