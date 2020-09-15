@@ -19,7 +19,7 @@ HTTP request methods include the following:
 This is a http request method that is used only to retrieve data for a specified resource. For example, a client like a web browser can send a GET request to the following url:
 - `https://mywebsite.com/books`
 
-The server is expected to respond (e.g with a json type response) containing the a list of all the books on the database as an example. (assuming the information about books is stored in a database on the server)
+The server is expected to respond (e.g with a json type response) containing a list of all the books on the database as an example. (assuming the information about books is stored in a database on the server)
 If the request was successful, the server also responds with something called a status code, in this scenario the status code will be 200 which indicates success.
 
 
